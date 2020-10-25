@@ -70,3 +70,28 @@ tvninguna = Canal("\"El dolor de los inocentes\"", "Novela", "Terror")
 
 tvninguna.mostrar()
 tvninguna.comentario()
+
+#=========================================================================================
+# Ejemplo 5: 
+
+# Utilizando la funcion super en un caso de herencia simple
+
+class Television(object):
+    def __init__(self, programa, categoria, genero, productora):#Definicion de atributos en el constructor de la clase padre
+        self.productora = productora
+        self.programa = programa
+        self.categoria = categoria
+        self.genero = genero
+
+class Canal(Television): #Clase Canal hereda de Television
+    
+    def __init__(self, programa, categoria, genero, productora,nombre_canal):# constructor de la clase Canal
+        super().__init__(programa, categoria, genero, productora) #Con super llamamos a los atributos de la clase padre
+        self.nombre_canal = nombre_canal   #Se especifica el nuevo atributo en Canal
+
+transmision = Canal("\"El dolor de los inocentes\"", "Novela", "Terror", "Eurovision Tv", "Canal Uno")
+print('Estas viendo ',transmision.programa,' es una',transmision.categoria)
+print('Mas Datos:')
+print('Genero: ', transmision.genero)
+print('Productora: ',transmision.productora)
+print('Canal: ',transmision.nombre_canal)
