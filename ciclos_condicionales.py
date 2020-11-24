@@ -156,8 +156,12 @@ for letra in userWord:
 
 print(palabraSinVocal)
 
-
-
+# uso de end para evitar la impresión con salto de linea
+for digit in "0165031806510":
+     if digit == "0":
+         print("x", end="")
+         continue
+     print(digit, end="")
 
 # ===============================================================================
 # CONDICIONALES
