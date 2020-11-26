@@ -137,3 +137,95 @@ else:
     print ("No se encuentra")
 
 print(x)
+
+#=================================================================================================
+#Ordenar listas con el método de la burbuja
+#Ejemplo obtenido del curso edube.org con Cisco 
+
+miLista = []  #Definimos la variable de tipo lista
+swapped = True  #Definimos una variable booleana
+num = int (input("¿Cuántos elementos deseas ordenar?:"))
+
+#El usuario ingresa una lista de elementos en desorden cuya cantidad sea la especificada anteriormente
+for i in range(num):
+    val = float(input("Introduce un elemento de la lista:"))
+    miLista.append(val)
+
+
+#Se procede a ordenar los elementos ingresados en la lista.
+while swapped:
+    swapped = False
+    for i in range(len(miLista) - 1):
+        if miLista[i] > miLista[i + 1]:
+            swapped = True
+            miLista[i], miLista[i + 1] = miLista[i + 1], miLista[i]
+
+print("\nOrdenado:")
+print(miLista)
+
+#=================================================================================================
+#Ordenar listas con dos ciclos for 
+#Se acopla el ejercicio anterior
+
+nuevaLista = []
+
+tam = int(input("Cuantos números se deben ordenar "))
+print("De acuerdo")
+
+for i in range(tam):
+    num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
+    nuevaLista.append(num)
+
+for j in range(len(nuevaLista) - 1):
+    for i in range(len(nuevaLista) - 1):
+        if nuevaLista[i] > nuevaLista[i + 1]:
+            nuevaLista[i], nuevaLista[i + 1] = nuevaLista[i + 1], nuevaLista[i]
+
+print("Asi queda ordenada la lista:")
+print(nuevaLista)
+
+#=================================================================================================
+#Ordenar listas con el método sort de python para ordenar de menor a mayor
+#Se acopla el ejercicio anterior
+
+nuevaLista = []
+
+tam = int(input("Cuantos números se deben ordenar "))
+print("De acuerdo")
+
+for i in range(tam):
+    num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
+    nuevaLista.append(num)
+
+print("Asi queda ordenada la lista:")
+nuevaLista.sort()
+print(nuevaLista)
+
+#=================================================================================================
+#Ordenar listas con el método reverse de python para ordenar de mayor a menor
+#Se acopla el ejercicio anterior
+
+nuevaLista = []
+
+tam = int(input("Cuantos números se deben ordenar "))
+print("De acuerdo")
+
+for i in range(tam):
+    num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
+    nuevaLista.append(num)
+
+print("Asi queda ordenada la lista:")
+nuevaLista.reverse()
+print(nuevaLista)
+
+#=================================================================================================
+# Copiando parte de la lista
+#Ejemplo obtenido del curso edube.org con Cisco 
+
+miLista = [10, 8, 6, 4, 2]
+nuevaLista = miLista[0:5]
+print(nuevaLista)
+
+#Con indices negativos
+nuevaLista = miLista [1:-1]
+print(nuevaLista)
