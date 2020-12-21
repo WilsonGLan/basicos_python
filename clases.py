@@ -36,7 +36,7 @@ class Television():
         self.categoria = categoria
         self.genero = genero
 
-class Canal(Television):
+class Canal(Television):#Entre parentesis agregamos la clase de la cual hereda
 
 #No es necesario crear constructor si la clase padre ya la tiene
     def mostrar(self):
@@ -61,7 +61,7 @@ class Reseña(object):
     def comentario(self):
         print("Este programa relata la historia de colombianos sumidos la corrupción de su gobierno")
 
-class Canal(Television,Reseña):
+class Canal(Television,Reseña):#Esta clase esta heredando de dos clases.
 
     def mostrar(self):
         print("A continuación sigue el programa",self.programa, "en la franja de ", self.categoria, "genero ", self.genero)
