@@ -280,6 +280,8 @@ Tabla = """\
 {}
 +---------------------------------------------------------------------+\
 """
-Tabla = (Tabla.format('\n'.join("| {:<8} {:<10} {:>8} {:>6} {:>7} {:>23} |".format(*fila)
+Tabla = (Tabla.format('\n'.join("| {:<9} {:<10} {:>6} {:>7} {:>7} {:>23} |".format(*fila)
  for fila in ListasAlumnos)))
 print (Tabla)
+
+
