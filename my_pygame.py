@@ -11,7 +11,9 @@ screen.blit(text, ((width - text.get_width()) // 2, (height - text.get_height())
 pygame.display.flip()
 while run:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT\
-        or event.type == pygame.MOUSEBUTTONUP\
-        or event.type == pygame.KEYUP:
+        """ El siguiente codigo fue reemplazado para hacerlo mas legible """
+        #if event.type == pygame.QUIT\
+        #or event.type == pygame.MOUSEBUTTONUP\
+        #or event.type == pygame.KEYUP: 
+        if event.type in [pygame.QUIT, pygame.MOUSEBUTTONUP, pygame.KEYUP]:
             run = False
