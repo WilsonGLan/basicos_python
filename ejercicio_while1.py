@@ -23,6 +23,7 @@ Escribe un programa que lea un número natural y ejecute los pasos anteriores si
 
 Sugerencia: la parte más importante del problema es como transformar la idea de Collatz en un ciclo while- esta es la clave del éxito.
 '''
+
 #SOLUCION
 
 num = int(input("Por favor ingrese un número: "))
@@ -34,9 +35,9 @@ if(num>0):
 
 while c0 != 1:
     if c0%2 == 0:
-        c0=c0/2
+        c0 /= 2
     else:
         c0=3*c0+1
-    cont = cont+1
+    cont += 1
     print(c0)
 print('Pasos necesarios: ', cont)
