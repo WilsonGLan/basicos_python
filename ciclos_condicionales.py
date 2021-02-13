@@ -3,9 +3,7 @@
 # ===============================================================================
 # Ciclo while
 
-x = 0
-while (x < 5):
-    x = x+1
+for x in range(1, 6):
     print(x)
 
 #Uso de break en un while
@@ -30,13 +28,13 @@ bloques = int(input("Ingrese el número de bloques:"))
 puestos = 0
 altura = 1
 while bloques > 0:
-    bloques = bloques - 1
-    puestos = puestos + 1
+    bloques -= 1
+    puestos += 1
     if puestos == altura:
-        altura = altura + 1
+        altura += 1
         puestos = 0
 
-altura = altura -1  
+altura -= 1
 print("La altura de la pirámide:", altura)
 
 # Otra manera de solucionar el problema anterior 
@@ -45,10 +43,10 @@ acumulado = 0
 altura = 0
 
 while bloques >= acumulado:
-    altura = altura + 1
+    altura += 1
     acumulado = altura + acumulado
 
-altura = altura - 1
+altura -= 1
 print("La altura de la pirámide:", altura)
 
 
@@ -140,28 +138,20 @@ userWord = input('Por favor escriba una palabra con vocales: ')
 userWord = userWord.upper()
 for letra in userWord:
     # Completa el cuerpo del ciclo for.
-    if letra == 'A':
-        continue
-    elif letra == 'E':
-        continue
-    elif letra == 'I':
-        continue
-    elif letra == 'O':
-        continue
-    elif letra == 'U':
+    if letra in ['A', 'E', 'I', 'O', 'U']:
         continue
     else:
         # Imprimir la palabra asignada a palabraSinVocal.
-        palabraSinVocal = palabraSinVocal+letra
+        palabraSinVocal += letra
 
 print(palabraSinVocal)
 
 # uso de end para evitar la impresión con salto de linea
 for digit in "0165031806510":
-     if digit == "0":
-         print("x", end="")
-         continue
-     print(digit, end="")
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
 
 # ===============================================================================
 # CONDICIONALES
@@ -188,10 +178,6 @@ a = 'maria'
 nombre = 'wilson'
 if a == nombre:  # condicion si a es exactamente el nombre escrito, entonces(:)
     print("Maria es mi madre")  # Imprimir
-elif a == nombre:
-    print("Diana es mi hermana")
-elif a == nombre:
-    print("Wilson soy yo")
 else:
     print("No lo conozco")
 
@@ -209,7 +195,7 @@ if (annio % 4 > 0):
     print('es un año comun')
 elif (annio % 100 > 0 and annio < 1582):
     print('No dentro de la epoca gregoriana')
-elif (annio % 100 > 0 and annio >= 1582):
+elif annio % 100 > 0:
     print('Es un año bisiesto')
 elif (annio % 400 > 0):
     print('Es un año común')
