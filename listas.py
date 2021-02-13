@@ -147,7 +147,7 @@ swapped = True  #Definimos una variable booleana
 num = int (input("¿Cuántos elementos deseas ordenar?:"))
 
 #El usuario ingresa una lista de elementos en desorden cuya cantidad sea la especificada anteriormente
-for i in range(num):
+for _ in range(num):
     val = float(input("Introduce un elemento de la lista:"))
     miLista.append(val)
 
@@ -172,11 +172,11 @@ nuevaLista = []
 tam = int(input("Cuantos números se deben ordenar "))
 print("De acuerdo")
 
-for i in range(tam):
+for _ in range(tam):
     num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
     nuevaLista.append(num)
 
-for j in range(len(nuevaLista) - 1):
+for _ in range(len(nuevaLista) - 1):
     for i in range(len(nuevaLista) - 1):
         if nuevaLista[i] > nuevaLista[i + 1]:
             nuevaLista[i], nuevaLista[i + 1] = nuevaLista[i + 1], nuevaLista[i]
@@ -193,7 +193,7 @@ nuevaLista = []
 tam = int(input("Cuantos números se deben ordenar "))
 print("De acuerdo")
 
-for i in range(tam):
+for _ in range(tam):
     num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
     nuevaLista.append(num)
 
@@ -210,7 +210,7 @@ nuevaLista = []
 tam = int(input("Cuantos números se deben ordenar "))
 print("De acuerdo")
 
-for i in range(tam):
+for _ in range(tam):
     num = int(input("De acuerdo, Por favor ingrese el elemento de la lista ==> "))
     nuevaLista.append(num)
 
@@ -261,18 +261,17 @@ miLista.sort()
 print("Lista inicial:",miLista)
 
 for i in range(1,tam-1):
-    if miLista[i] != miLista[i+1]:
-        if miLista[i] not in Ltemp:
-            Ltemp.append(miLista[i])
+    if miLista[i] != miLista[i + 1] and miLista[i] not in Ltemp:
+        Ltemp.append(miLista[i])
     if i+1 == tam-1:
         Ltemp.append(miLista[i+1])
 print("La lista solo con elementos únicos:", Ltemp)
 
 ListasAlumnos = [['Juan', 'Carmelo', 5, 7, 9, 7], 
-                 ['Laura', 'Jazmine', 7, 8, 5, 6.66],
-                 ['Dario', 'Villalobos', 5, 6, 3, 4.66], 
-                 ['Marito', 'Tasolo', 4, 7, 9, 6.666],
-                 ['Esteban', 'Quito', 9, 9, 8, 8.66]]
+                ['Laura', 'Jazmine', 7, 8, 5, 6.66],
+                ['Dario', 'Villalobos', 5, 6, 3, 4.66], 
+                ['Marito', 'Tasolo', 4, 7, 9, 6.666],
+                ['Esteban', 'Quito', 9, 9, 8, 8.66]]
 Tabla = """\
 +---------------------------------------------------------------------+
 | Nombre    Apellido        Primero Segundo Tercero     Promedio anual|
@@ -281,7 +280,7 @@ Tabla = """\
 +---------------------------------------------------------------------+\
 """
 Tabla = (Tabla.format('\n'.join("| {:<9} {:<10} {:>6} {:>7} {:>7} {:>23} |".format(*fila)
- for fila in ListasAlumnos)))
+for fila in ListasAlumnos)))
 print (Tabla)
 
 
