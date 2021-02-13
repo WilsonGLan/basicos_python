@@ -57,7 +57,7 @@ print(1//2*3)
 
 x = int(input())
 y = int(input())
-x = x % y
-x = x % y
+x %= y
+x %= y
 y = 1/2+3//3+4**2
 print (y)
